@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Name=Dockerized DBeaver
+Comment=A dockerized Universal Database Manager and SQL Client
+Icon=/home/<user>/.dbeaver/dockerized-dbeaver-256px.png
+Categories=IDE;Development;
+Keywords=Database;SQL;IDE;JDBC;ODBC;MySQL;PostgreSQL;
+GenericName=Database Manager;
+MimeType=application/sql;
+Exec=/home/<user>/.dbeaver/dbeaver
