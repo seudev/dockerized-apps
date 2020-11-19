@@ -9,7 +9,7 @@ RUN apt-get update \
     && apt-get install -y libswt-webkit-gtk-4-jni \
     && rm -rf /var/lib/apt/lists/*
 
-ARG DBEAVER_VERSION="7.2.4"
+ARG DBEAVER_VERSION="7.2.5"
 ARG DBEAVER_PLATAFORM="linux.gtk.x86_64"
 ARG DBEAVER_PACKAGE="dbeaver-ce-$DBEAVER_VERSION-$DBEAVER_PLATAFORM.tar.gz"
 ARG DBEAVER_PACKAGE_URL="https://download.dbeaver.com/community/$DBEAVER_VERSION/$DBEAVER_PACKAGE"

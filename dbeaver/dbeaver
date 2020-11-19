@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DBEAVER_VERSION="7.2.4"
+DBEAVER_VERSION="7.2.5"
 
 exec bash -c "
 docker run --rm \

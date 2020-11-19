@@ -13,7 +13,7 @@ A dockerized [DBeaver CE](https://dbeaver.io/) desktop application.
 ### Docker Pull
 
 ```sh
-docker pull seudev/dbeaver:7.2.4
+docker pull seudev/dbeaver:7.2.5
 ```
 
 ### Allow access to the X server
@@ -35,9 +35,9 @@ Run the below script to download and configure the shortcut in your desktop.
 
 ```sh
 mkdir ~/.dbeaver \
-&& wget https://raw.githubusercontent.com/seudev/dockerized-apps/dbeaver-v7.2.4/dbeaver/dbeaver -O ~/.dbeaver/dbeaver \
-&& wget https://raw.githubusercontent.com/seudev/dockerized-apps/dbeaver-v7.2.4/dbeaver/dockerized-dbeaver-256px.png -O ~/.dbeaver/dockerized-dbeaver-256px.png \
-&& wget https://raw.githubusercontent.com/seudev/dockerized-apps/dbeaver-v7.2.4/dbeaver/com.seudev.dbeaver.desktop -O ~/Desktop/com.seudev.dbeaver.desktop \
+&& wget https://raw.githubusercontent.com/seudev/dockerized-apps/dbeaver-v7.2.5/dbeaver/dbeaver -O ~/.dbeaver/dbeaver \
+&& wget https://raw.githubusercontent.com/seudev/dockerized-apps/dbeaver-v7.2.5/dbeaver/dockerized-dbeaver-256px.png -O ~/.dbeaver/dockerized-dbeaver-256px.png \
+&& wget https://raw.githubusercontent.com/seudev/dockerized-apps/dbeaver-v7.2.5/dbeaver/com.seudev.dbeaver.desktop -O ~/Desktop/com.seudev.dbeaver.desktop \
 && sed -i "s/<user>/$USER/" ~/Desktop/com.seudev.dbeaver.desktop \
 && chmod 755 ~/.dbeaver/dbeaver ~/Desktop/com.seudev.dbeaver.desktop
 ```
@@ -55,7 +55,7 @@ docker run --name dbeaver -ti --rm \
     -e DISPLAY=$DISPLAY \
     -v /tmp/.X11-unix:/tmp/.X11-unix:ro \
     -e GTK_THEME=Adwaita:dark \
-    seudev/dbeaver:7.2.4
+    seudev/dbeaver:7.2.5
 ```
 
 ### `docker run` parameters
@@ -72,7 +72,7 @@ docker run --name dbeaver -ti --rm \
 ### Building this image:
 
 ```sh
-docker build -t seudev/dbeaver:7.2.4 .
+docker build -t seudev/dbeaver:7.2.5 .
 ```
 
 ## Licensing
