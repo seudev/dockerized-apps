@@ -34,7 +34,7 @@ fi
 Run the below script to download and configure the shortcut in your desktop.
 
 ```sh
-mkdir ~/.dbeaver \
+mkdir -p ~/.dbeaver \
 && wget https://raw.githubusercontent.com/seudev/dockerized-apps/master/dbeaver/dbeaver -O ~/.dbeaver/dbeaver \
 && wget https://raw.githubusercontent.com/seudev/dockerized-apps/master/dbeaver/dockerized-dbeaver-256px.png -O ~/.dbeaver/dockerized-dbeaver-256px.png \
 && wget https://raw.githubusercontent.com/seudev/dockerized-apps/master/dbeaver/com.seudev.dbeaver.desktop -O ~/Desktop/com.seudev.dbeaver.desktop \
