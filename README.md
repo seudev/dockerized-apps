@@ -8,7 +8,8 @@ A Dockerized application set.
 
 ### ![dbeaver](https://raw.githubusercontent.com/seudev/dockerized-apps/master/dbeaver/dockerized-dbeaver-64px.png) seudev/dbeaver
 
-* [seudev/dbeaver:7.2.5](dbeaver/README.md)
+* [seudev/dbeaver:7.2.5](dbeaver/7.2.5/README.md)
+* [seudev/dbeaver:7.2.4](dbeaver/7.2.4/README.md)
 
 ## Licensing
 
