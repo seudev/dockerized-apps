@@ -13,6 +13,7 @@ A Dockerized application set.
 
 ### ![jaspersoft-studio](https://raw.githubusercontent.com/seudev/dockerized-apps/master/jaspersoft-studio/dockerized-jaspersoft-studio-64px.png) seudev/jaspersoft-studio
 
+* [seudev/jaspersoft-studio:6.16.0](jaspersoft-studio/6.16.0/README.md)
 * [seudev/jaspersoft-studio:5.5.1](jaspersoft-studio/5.5.1/README.md)
 
 ## Licensing
