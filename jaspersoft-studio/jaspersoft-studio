@@ -1,0 +1,13 @@
+#!/bin/bash
+
+JASPERSOFT_STUDIO_VERSION="<version>"
+
+exec bash -c "
+docker run --rm \
+    --network host \
+    -v ~/.jaspersoft-studio/JaspersoftWorkspace:/root/JaspersoftWorkspace \
+    -e DISPLAY=$DISPLAY \
+    -v /tmp/.X11-unix:/tmp/.X11-unix:ro \
+    -e GTK_THEME=Adwaita:dark \
+    seudev/jaspersoft-studio:$JASPERSOFT_STUDIO_VERSION
+"
