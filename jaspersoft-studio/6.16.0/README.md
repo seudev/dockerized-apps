@@ -29,9 +29,9 @@ fi
 
 **Note**: The `xhost +local:root` command can be executed directly, without be append to `~./profile` file, but this mode is necessary re-execute each system boot.
 
-### Create a shortcut on the desktop (Optional)
+### Create a shortcut on the desktop and in the Start Menu (Optional)
 
-Run the below script to download and configure the shortcut in your desktop.
+Run the below script to download and configure the shortcut in your desktop and in the Start Menu.
 
 ```sh
 mkdir -p ~/seudev/dockerized-apps/jaspersoft-studio/6.16.0 \
@@ -41,7 +41,8 @@ mkdir -p ~/seudev/dockerized-apps/jaspersoft-studio/6.16.0 \
 && sed -i "s/<version>/6.16.0/" ~/seudev/dockerized-apps/jaspersoft-studio/6.16.0/jaspersoft-studio \
 && sed -i "s/<version>/6.16.0/" ~/Desktop/com.seudev.jaspersoft-studio.6.16.0.desktop \
 && sed -i "s/<user>/$USER/" ~/Desktop/com.seudev.jaspersoft-studio.6.16.0.desktop \
-&& chmod 755 ~/seudev/dockerized-apps/jaspersoft-studio/6.16.0/jaspersoft-studio ~/Desktop/com.seudev.jaspersoft-studio.6.16.0.desktop
+&& chmod 755 ~/seudev/dockerized-apps/jaspersoft-studio/6.16.0/jaspersoft-studio ~/Desktop/com.seudev.jaspersoft-studio.6.16.0.desktop \
+&& cp ~/Desktop/com.seudev.jaspersoft-studio.6.16.0.desktop ~/.local/share/applications
 ```
 
 **Note**: If you want to change the Jaspersoft Studio version, theme mode or other parameter, then open the `~/seudev/dockerized-apps/jaspersoft-studio/6.16.0/jaspersoft-studio` file with a text editor and edit it.
