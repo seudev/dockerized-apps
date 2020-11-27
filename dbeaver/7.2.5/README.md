@@ -29,9 +29,9 @@ fi
 
 **Note**: The `xhost +local:root` command can be executed directly, without be append to `~./profile` file, but this mode is necessary re-execute each system boot.
 
-### Create a shortcut on the desktop (Optional)
+### Create a shortcut on the desktop and in the Start Menu (Optional)
 
-Run the below script to download and configure the shortcut in your desktop.
+Run the below script to download and configure the shortcut in your desktop and in the Start Menu.
 
 ```sh
 mkdir -p ~/seudev/dockerized-apps/dbeaver/7.2.5 \
@@ -41,7 +41,8 @@ mkdir -p ~/seudev/dockerized-apps/dbeaver/7.2.5 \
 && sed -i "s/<version>/7.2.5/" ~/seudev/dockerized-apps/dbeaver/7.2.5/dbeaver \
 && sed -i "s/<version>/7.2.5/" ~/Desktop/com.seudev.dbeaver.7.2.5.desktop \
 && sed -i "s/<user>/$USER/" ~/Desktop/com.seudev.dbeaver.7.2.5.desktop \
-&& chmod 755 ~/seudev/dockerized-apps/dbeaver/7.2.5/dbeaver ~/Desktop/com.seudev.dbeaver.7.2.5.desktop
+&& chmod 755 ~/seudev/dockerized-apps/dbeaver/7.2.5/dbeaver ~/Desktop/com.seudev.dbeaver.7.2.5.desktop \
+&& cp ~/Desktop/com.seudev.dbeaver.7.2.5.desktop ~/.local/share/applications
 ```
 
 **Note**: If you want to change the DBeaver version, theme mode or other parameter, then open the `~/seudev/dockerized-apps/dbeaver/7.2.5/dbeaver` file with a text editor and edit it.
