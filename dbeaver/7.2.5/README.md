@@ -34,16 +34,16 @@ fi
 Run the below script to download and configure the shortcut in your desktop.
 
 ```sh
-mkdir -p ~/.dbeaver \
-&& wget https://raw.githubusercontent.com/seudev/dockerized-apps/master/dbeaver/dbeaver -O ~/.dbeaver/dbeaver \
-&& wget https://raw.githubusercontent.com/seudev/dockerized-apps/master/dbeaver/dockerized-dbeaver-256px.png -O ~/.dbeaver/dockerized-dbeaver-256px.png \
+mkdir -p ~/seudev/dockerized-apps/dbeaver \
+&& wget https://raw.githubusercontent.com/seudev/dockerized-apps/master/dbeaver/dbeaver -O ~/seudev/dockerized-apps/dbeaver/dbeaver \
+&& wget https://raw.githubusercontent.com/seudev/dockerized-apps/master/dbeaver/dockerized-dbeaver-256px.png -O ~/seudev/dockerized-apps/dbeaver/dockerized-dbeaver-256px.png \
 && wget https://raw.githubusercontent.com/seudev/dockerized-apps/master/dbeaver/com.seudev.dbeaver.desktop -O ~/Desktop/com.seudev.dbeaver.desktop \
-&& sed -i "s/<version>/7.2.5/" ~/.dbeaver/dbeaver \
+&& sed -i "s/<version>/7.2.5/" ~/seudev/dockerized-apps/dbeaver/dbeaver \
 && sed -i "s/<user>/$USER/" ~/Desktop/com.seudev.dbeaver.desktop \
-&& chmod 755 ~/.dbeaver/dbeaver ~/Desktop/com.seudev.dbeaver.desktop
+&& chmod 755 ~/seudev/dockerized-apps/dbeaver/dbeaver ~/Desktop/com.seudev.dbeaver.desktop
 ```
 
-**Note**: If you want to change the DBeaver version, theme mode or other parameter, then open the `~/.dbeaver/dbeaver` file with a text editor and edit it.
+**Note**: If you want to change the DBeaver version, theme mode or other parameter, then open the `~/seudev/dockerized-apps/dbeaver/dbeaver` file with a text editor and edit it.
 
 ## Using Dockerized DBeaver
 
@@ -52,7 +52,7 @@ mkdir -p ~/.dbeaver \
 ```sh
 docker run -ti --rm \
     --network host \
-    -v ~/.dbeaver/DBeaverData:/root/.local/share/DBeaverData \
+    -v ~/seudev/dockerized-apps/dbeaver/DBeaverData:/root/.local/share/DBeaverData \
     -e DISPLAY=$DISPLAY \
     -v /tmp/.X11-unix:/tmp/.X11-unix:ro \
     -e GTK_THEME=Adwaita:dark \
@@ -61,14 +61,14 @@ docker run -ti --rm \
 
 ### `docker run` parameters
 
-| **parameter**                                              | **Description**                                                                                                  |
-| ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `--network host`                                           | Use it if you need to access database server on the host machine                                                 |
-| `-v ~/.dbeaver/DBeaverData:/root/.local/share/DBeaverData` | Use the `~/.dbeaver/DBeaverData` local directory to save the dbeaver data like connections, scripts and drivers. |
-| `-e DISPLAY=$DISPLAY`                                      | Set the `DISPLAY` environment variable with same local value. It's used by X server.                             |
-| `-v /tmp/.X11-unix:/tmp/.X11-unix:ro`                      | Bind the `/tmp/.X11-unix` local directory in read only mode. It's used by X server.                              |
-| `-e GTK_THEME=Adwaita:light`                               | Set the light mode.                                                                                              |
-| `-e GTK_THEME=Adwaita:dark`                                | Set the dark mode.                                                                                               |
+| **parameter**                                     | **Description**                                                                                                                        |
+| ------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `--network host`                                  | Use it if you need to access database server on the host machine                                                                       |
+| `-v ~/seudev/dockerized-apps/dbeaver/DBeaverData` | Use the `~/seudev/dockerized-apps/dbeaver/DBeaverData` local directory to save the dbeaver data like connections, scripts and drivers. |
+| `-e DISPLAY=$DISPLAY`                             | Set the `DISPLAY` environment variable with same local value. It's used by X server.                                                   |
+| `-v /tmp/.X11-unix:/tmp/.X11-unix:ro`             | Bind the `/tmp/.X11-unix` local directory in read only mode. It's used by X server.                                                    |
+| `-e GTK_THEME=Adwaita:light`                      | Set the light mode.                                                                                                                    |
+| `-e GTK_THEME=Adwaita:dark`                       | Set the dark mode.                                                                                                                     |
 
 ### Building this image:
 
