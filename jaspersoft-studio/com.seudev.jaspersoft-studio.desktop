@@ -2,11 +2,11 @@
 Version=1.0
 Type=Application
 Terminal=false
-Name=Dockerized Jaspersoft Studio
+Name=Dockerized Jaspersoft Studio <version>
 Comment=A dockerized report designer for JasperReports and JasperReports Server
 Icon=/home/<user>/seudev/dockerized-apps/jaspersoft-studio/dockerized-jaspersoft-studio-256px.png
 Categories=IDE;Development;
 Keywords=jasper;jrxml;IDE;
 GenericName=Report designer;
 MimeType=application/xml;
-Exec=/home/<user>/seudev/dockerized-apps/jaspersoft-studio/jaspersoft-studio
+Exec=/home/<user>/seudev/dockerized-apps/jaspersoft-studio/<version>/jaspersoft-studio
