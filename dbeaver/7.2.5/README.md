@@ -53,7 +53,7 @@ mkdir -p ~/seudev/dockerized-apps/dbeaver/7.2.5 \
 ```sh
 docker run -ti --rm \
     --network host \
-    -v ~/seudev/dockerized-apps/dbeaver/DBeaverData:/root/.local/share/DBeaverData \
+    -v ~/seudev/dockerized-apps/dbeaver/volumes/DBeaverData:/root/.local/share/DBeaverData \
     -e DISPLAY=$DISPLAY \
     -v /tmp/.X11-unix:/tmp/.X11-unix:ro \
     -e GTK_THEME=Adwaita:dark \
@@ -62,14 +62,14 @@ docker run -ti --rm \
 
 ### `docker run` parameters
 
-| **parameter**                                     | **Description**                                                                                                                        |
-| ------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `--network host`                                  | Use it if you need to access database server on the host machine                                                                       |
-| `-v ~/seudev/dockerized-apps/dbeaver/DBeaverData` | Use the `~/seudev/dockerized-apps/dbeaver/DBeaverData` local directory to save the dbeaver data like connections, scripts and drivers. |
-| `-e DISPLAY=$DISPLAY`                             | Set the `DISPLAY` environment variable with same local value. It's used by X server.                                                   |
-| `-v /tmp/.X11-unix:/tmp/.X11-unix:ro`             | Bind the `/tmp/.X11-unix` local directory in read only mode. It's used by X server.                                                    |
-| `-e GTK_THEME=Adwaita:light`                      | Set the light mode.                                                                                                                    |
-| `-e GTK_THEME=Adwaita:dark`                       | Set the dark mode.                                                                                                                     |
+| **parameter**                                             | **Description**                                                                                                                                |
+| --------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--network host`                                          | Use it if you need to access database server on the host machine                                                                               |
+| `-v ~/seudev/dockerized-apps/dbeaver/volumes/DBeaverData` | Use the `~/seudev/dockerized-apps/dbeaver/volumes/DBeaverData` local directory to save the dbeaver data like connections, scripts and drivers. |
+| `-e DISPLAY=$DISPLAY`                                     | Set the `DISPLAY` environment variable with same local value. It's used by X server.                                                           |
+| `-v /tmp/.X11-unix:/tmp/.X11-unix:ro`                     | Bind the `/tmp/.X11-unix` local directory in read only mode. It's used by X server.                                                            |
+| `-e GTK_THEME=Adwaita:light`                              | Set the light mode.                                                                                                                            |
+| `-e GTK_THEME=Adwaita:dark`                               | Set the dark mode.                                                                                                                             |
 
 ### Building this image:
 

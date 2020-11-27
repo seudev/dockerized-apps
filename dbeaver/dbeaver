@@ -5,7 +5,7 @@ DBEAVER_VERSION="<version>"
 exec bash -c "
 docker run --rm \
     --network host \
-    -v ~/seudev/dockerized-apps/dbeaver/DBeaverData:/root/.local/share/DBeaverData \
+    -v ~/seudev/dockerized-apps/dbeaver/volumes/DBeaverData:/root/.local/share/DBeaverData \
     -e DISPLAY=$DISPLAY \
     -v /tmp/.X11-unix:/tmp/.X11-unix:ro \
     -e GTK_THEME=Adwaita:dark \
