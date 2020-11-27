@@ -34,16 +34,17 @@ fi
 Run the below script to download and configure the shortcut in your desktop.
 
 ```sh
-mkdir -p ~/seudev/dockerized-apps/dbeaver \
-&& wget https://raw.githubusercontent.com/seudev/dockerized-apps/master/dbeaver/dbeaver -O ~/seudev/dockerized-apps/dbeaver/dbeaver \
+mkdir -p ~/seudev/dockerized-apps/dbeaver/7.2.5 \
+&& wget https://raw.githubusercontent.com/seudev/dockerized-apps/master/dbeaver/dbeaver -O ~/seudev/dockerized-apps/dbeaver/7.2.5/dbeaver \
 && wget https://raw.githubusercontent.com/seudev/dockerized-apps/master/dbeaver/dockerized-dbeaver-256px.png -O ~/seudev/dockerized-apps/dbeaver/dockerized-dbeaver-256px.png \
-&& wget https://raw.githubusercontent.com/seudev/dockerized-apps/master/dbeaver/com.seudev.dbeaver.desktop -O ~/Desktop/com.seudev.dbeaver.desktop \
-&& sed -i "s/<version>/7.2.5/" ~/seudev/dockerized-apps/dbeaver/dbeaver \
-&& sed -i "s/<user>/$USER/" ~/Desktop/com.seudev.dbeaver.desktop \
-&& chmod 755 ~/seudev/dockerized-apps/dbeaver/dbeaver ~/Desktop/com.seudev.dbeaver.desktop
+&& wget https://raw.githubusercontent.com/seudev/dockerized-apps/master/dbeaver/com.seudev.dbeaver.desktop -O ~/Desktop/com.seudev.dbeaver.7.2.5.desktop \
+&& sed -i "s/<version>/7.2.5/" ~/seudev/dockerized-apps/dbeaver/7.2.5/dbeaver \
+&& sed -i "s/<version>/7.2.5/" ~/Desktop/com.seudev.dbeaver.7.2.5.desktop \
+&& sed -i "s/<user>/$USER/" ~/Desktop/com.seudev.dbeaver.7.2.5.desktop \
+&& chmod 755 ~/seudev/dockerized-apps/dbeaver/7.2.5/dbeaver ~/Desktop/com.seudev.dbeaver.7.2.5.desktop
 ```
 
-**Note**: If you want to change the DBeaver version, theme mode or other parameter, then open the `~/seudev/dockerized-apps/dbeaver/dbeaver` file with a text editor and edit it.
+**Note**: If you want to change the DBeaver version, theme mode or other parameter, then open the `~/seudev/dockerized-apps/dbeaver/7.2.5/dbeaver` file with a text editor and edit it.
 
 ## Using Dockerized DBeaver
 
