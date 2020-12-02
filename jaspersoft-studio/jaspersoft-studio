@@ -5,6 +5,7 @@ JASPERSOFT_STUDIO_VERSION="<version>"
 exec bash -c "
 docker run --rm \
     --network host \
+    -v ~/dev-workspace:/root/dev-workspace \
     -v ~/seudev/dockerized-apps/jaspersoft-studio/volumes/JaspersoftWorkspace:/root/JaspersoftWorkspace \
     -e DISPLAY=$DISPLAY \
     -v /tmp/.X11-unix:/tmp/.X11-unix:ro \

@@ -54,6 +54,7 @@ mkdir -p ~/seudev/dockerized-apps/jaspersoft-studio/6.16.0 \
 ```sh
 docker run -it --rm \
     --network host \
+    -v ~/dev-workspace:/root/dev-workspace \
     -v ~/seudev/dockerized-apps/jaspersoft-studio/JaspersoftWorkspace:/root/JaspersoftWorkspace \
     -e DISPLAY=$DISPLAY \
     -v /tmp/.X11-unix:/tmp/.X11-unix:ro \
@@ -66,6 +67,7 @@ docker run -it --rm \
 | **parameter**                                                               | **Description**                                                                                                           |
 | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
 | `--network host`                                                            | Use it if you need to access some database server directly on the host machine.                                           |
+| `-v ~/dev-workspace`                                                        | Use the `~/dev-workspace` local directory to share something with the container.                                          |
 | `-v ~/seudev/dockerized-apps/jaspersoft-studio/volumes/JaspersoftWorkspace` | Bind the `~/seudev/dockerized-apps/jaspersoft-studio/volumes/JaspersoftWorkspace` local directory to cache the workspace. |
 | `-e DISPLAY=$DISPLAY`                                                       | Set the `DISPLAY` environment variable with same local value. It's used by X server.                                      |
 | `-v /tmp/.X11-unix:/tmp/.X11-unix:ro`                                       | Bind the `/tmp/.X11-unix` local directory in read only mode. It's used by X server.                                       |
