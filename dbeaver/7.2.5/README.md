@@ -80,6 +80,17 @@ docker run -ti --rm \
 docker build -t seudev/dbeaver:7.2.5 .
 ```
 
+## Uninstall
+
+If you want uninstall this dockerized application, then execute the below scripts:
+
+1. Remove the docker image: `docker image rm seudev/dbeaver:7.2.5`
+1. Remove the version folder: `rm -rf ~/seudev/dockerized-apps/dbeaver/7.2.5`
+1. Remove the shortcut from the Desktop: `rm -f ~/Desktop/com.seudev.dbeaver.7.2.5.desktop`
+1. Remove the shortcut from the Start Menu: `rm -f ~/.local/share/applications/com.seudev.dbeaver.7.2.5.desktop`
+1. **If you want remove the generated volumes** (connections, scripts and drivers): `sudo rm -rf ~/seudev/dockerized-apps/dbeaver/volumes`
+1. **If you want remove all dbeaver folder** (generated volumes, icon and all version folders): `sudo rm -rf ~/seudev/dockerized-apps/dbeaver`
+
 ## Licensing
 
 **seudev/dockerized-apps** is provided and distributed under the [Apache Software License 2.0](http://www.apache.org/licenses/LICENSE-2.0).
