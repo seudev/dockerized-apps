@@ -80,6 +80,17 @@ docker run -it --rm \
 docker build -t seudev/jaspersoft-studio:5.5.1 .
 ```
 
+## Uninstall
+
+If you want uninstall this dockerized application, then execute the below scripts:
+
+1. Remove the docker image: `docker image rm jaspersoft-studio:5.5.1`
+1. Remove the version folder: `rm -rf ~/seudev/dockerized-apps/jaspersoft-studio/5.5.1`
+1. Remove the shortcut from the Desktop: `rm -f ~/Desktop/com.seudev.jaspersoft-studio.5.5.1.desktop`
+1. Remove the shortcut from the Start Menu: `rm -f ~/.local/share/applications/com.seudev.jaspersoft-studio.5.5.1.desktop`
+1. **If you want remove the generated volumes** (JaspersoftWorkspace): `sudo rm -rf ~/seudev/dockerized-apps/jaspersoft-studio/volumes`
+1. **If you want remove all dbeaver folder** (generated volumes, icon and all version folders): `sudo rm -rf ~/seudev/dockerized-apps/jaspersoft-studio`
+
 ## Licensing
 
 **seudev/dockerized-apps** is provided and distributed under the [Apache Software License 2.0](http://www.apache.org/licenses/LICENSE-2.0).
